@@ -1217,6 +1217,7 @@
     <instance objName="obj_collision_solid" x="1376" y="1408" name="inst_81A0DAC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_solid" x="1360" y="1408" name="inst_1B9120C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_solid" x="1360" y="1392" name="inst_C877AE8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_transition_test" x="976" y="832" name="inst_728C7E85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

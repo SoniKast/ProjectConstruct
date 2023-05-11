@@ -44,10 +44,19 @@
     </sprites>
     <sprite>sprites\spr_null</sprite>
     <sprite>sprites\spr_collision_solid</sprite>
+    <sprite>sprites\spr_transition_control</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
-    <background>background\bg_battle</background>
+    <backgrounds name="Battle System">
+      <background>background\bg_battle</background>
+      <background>background\bg_orange_wedge</background>
+      <background>background\bg_fire</background>
+      <background>background\bg_mike</background>
+      <background>background\bg_pop_line</background>
+      <background>background\bg_square</background>
+      <background>background\bg_bullseye</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -79,9 +88,15 @@
       <script>scripts\fs_instance_collision_platform_flags.gml</script>
       <script>scripts\fs_instance_collision_side_check.gml</script>
     </scripts>
-    <scripts name="[Culling]">
-      <script>scripts\fs_instance_get_culling_mode.gml</script>
-      <script>scripts\fs_instance_set_culling_mode.gml</script>
+    <scripts name="[Other]">
+      <scripts name="[Culling]">
+        <script>scripts\fs_instance_get_culling_mode.gml</script>
+        <script>scripts\fs_instance_set_culling_mode.gml</script>
+      </scripts>
+      <script>scripts\draw_background_tiled_horizontal_part.gml</script>
+      <script>scripts\draw_background_tiled_part.gml</script>
+      <script>scripts\draw_background_tiled_vertical_part.gml</script>
+      <script>scripts\parallax_add_node.gml</script>
     </scripts>
     <script>scripts\fs_self_in_view.gml</script>
   </scripts>
@@ -102,15 +117,24 @@
     <objects name="HUD">
       <object>objects\obj_level_controller</object>
     </objects>
-    <objects name="Ki Blasts">
-      <object>objects\obj_blast</object>
-    </objects>
-    <objects name="Collision">
-      <objects name="Parents">
-        <object>objects\par_terrain</object>
-        <object>objects\par_solid</object>
+    <objects name="NPCs">
+      <objects name="Blasts">
+        <object>objects\obj_blast</object>
       </objects>
-      <object>objects\obj_collision_solid</object>
+      <objects name="Collision">
+        <objects name="Parents">
+          <object>objects\par_terrain</object>
+          <object>objects\par_solid</object>
+        </objects>
+        <object>objects\obj_collision_solid</object>
+        <object>objects\obj_transition_test</object>
+      </objects>
+    </objects>
+    <objects name="Battle System">
+      <objects name="BG">
+        <object>objects\par_parallax</object>
+        <object>objects\obj_parallax_battle</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -71,7 +71,7 @@
     draw_rectangle_colour(view_xview+30, view_yview+14, view_xview+30+floor(global.healthpoints / 1.74), view_yview+21, $f5f5f5, $f5f5f5, $f5f5f5, $f5f5f5, false);
 
 // Draw the XP bar
-    draw_sprite_part(spr_xp_bar, 0, 0, 0, global.player_xp, 2, view_xview+28, view_yview+23);
+    draw_sprite_part(spr_xp_bar, 0, 0, 0, global.player_xp/global.player_max_xp*(60), 2, view_xview+28, view_yview+23);
     
 // Draw the XP and Level for test purposes
     draw_set_font(global.font_menu);
