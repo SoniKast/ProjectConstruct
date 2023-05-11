@@ -30,7 +30,7 @@
  // Main:
     global.display_width      = 240; // The width of the game display.
     global.display_height     = 160; // The height of the game display.
-    global.display_scale      = 3;   // The current scale of the display.
+    global.display_scale      = 4;   // The current scale of the display.
     global.display_fullscreen = 0;   // The current fullscreen state.
     global.display_vsync      = 1;   // Whether the game uses vertical sync.
  
@@ -255,7 +255,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game.display_scale = 4;
+            <string>// Change the display scale
+global.display_scale = 4;
 event_user(0);
 </string>
           </argument>
@@ -279,7 +280,8 @@ event_user(0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game.display_scale = 3;
+            <string>// Change the display scale
+global.display_scale = 3;
 event_user(0);
 </string>
           </argument>
@@ -303,7 +305,8 @@ event_user(0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game.display_scale = 2;
+            <string>// Change the display scale
+global.display_scale = 2;
 event_user(0);
 </string>
           </argument>
@@ -327,7 +330,8 @@ event_user(0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game.display_scale = 1;
+            <string>// Change the display scale
+global.display_scale = 1;
 event_user(0);
 </string>
           </argument>

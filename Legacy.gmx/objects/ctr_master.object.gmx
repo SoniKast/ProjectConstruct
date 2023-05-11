@@ -31,8 +31,10 @@
     initialized = true;
  
  // Define app data.
-    global.app_title   = "Game";
+    global.app_title   = "You Could Have It So Much Better";
     global.app_version = "1.0";
+    global.chapter_number = 1;
+    global.chapter_string = "THE FALLEN";
         
  // Game variables:
     global.debug            = 0;  // Toggles the games debug mode.

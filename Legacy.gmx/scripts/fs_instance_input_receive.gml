@@ -43,3 +43,87 @@
        dpad_up   [input.hold] = false;       
     }
     
+ // Count input checks.
+    if(dpad_up[input.press])
+    {
+       input_up_count += 1;
+       if(input_up_mtimer != 20) input_up_mtimer = 20;
+    }
+    if(input_up_mtimer > 0)
+    {
+       input_up_mtimer -= 1;
+    }
+    else
+    {
+       input_up_count = 0;
+    }
+              
+    if(dpad_down[input.press])
+    {
+       input_down_count += 1;
+       if(input_down_mtimer != 20) input_down_mtimer = 20;
+    }
+    if(input_down_mtimer > 0)
+    {
+       input_down_mtimer -= 1;
+    }
+    else
+    {
+       input_down_count = 0;
+    }
+              
+    if(dpad_left[input.press])
+    {
+       input_left_count += 1;
+       if(input_left_mtimer != 20) input_left_mtimer = 20;
+    }
+    if(input_left_mtimer > 0)
+    {
+       input_left_mtimer -= 1;
+    }
+    else
+    {
+       input_left_count = 0;
+    }
+              
+    if(dpad_right[input.press])
+    {
+       input_right_count += 1;
+       if(input_right_mtimer != 20) input_right_mtimer = 20;
+    }
+    if(input_right_mtimer > 0)
+    {
+       input_right_mtimer -= 1;
+    }
+    else
+    {
+       input_right_count = 0;
+    }
+              
+    if(button_a[input.press])
+    {
+       input_action_count += 1;
+       if(input_action_mtimer != 20) input_action_mtimer = 20;
+    }         
+    if(input_action_mtimer > 0)
+    {
+       input_action_mtimer -= 1;
+    }
+    else
+    {
+       input_action_count = 0;
+    }           
+    
+    if(button_b[input.press])
+    {
+       input_special_count += 1;
+       if(input_special_mtimer != 20) input_special_mtimer = 20;
+    }          
+    if(input_special_mtimer > 0)
+    {
+       input_special_mtimer -= 1;
+    }
+    else
+    {
+       input_special_count = 0;
+    }

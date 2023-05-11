@@ -18,3 +18,9 @@
     val_button_b      = (global.key_special);
     val_button_start  = (global.key_enter);
     val_button_select = (global.key_select);
+    input_up_count      = 0; input_up_mtimer      = 0;
+    input_down_count    = 0; input_down_mtimer    = 0;    
+    input_left_count    = 0; input_left_mtimer    = 0;
+    input_right_count   = 0; input_right_mtimer   = 0;   
+    input_action_count  = 0; input_action_mtimer  = 0;
+    input_special_count = 0; input_special_mtimer = 0;  
