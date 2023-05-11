@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>/// Initialize controllers, then continue to the next room.
 
@@ -19,6 +19,7 @@
  // Do not change the order of creation, otherwise you will run into errors.
     instance_create(0, 0, ctr_display); 
     instance_create(0, 0, ctr_master);
+    instance_create(0, 0, ctr_level_up);
  // instance_create(0, 0, ctr_audio);
 
  // If the game is running from Game Makers IDE, automatically toggle on debug mode. 

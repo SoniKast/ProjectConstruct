@@ -6,7 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="Goku">
+    <sprites name="Player">
       <sprites name="Up">
         <sprite>sprites\spr_goku_front</sprite>
         <sprite>sprites\spr_goku_front_walk</sprite>
@@ -27,28 +27,17 @@
         <sprite>sprites\spr_goku_right_walk</sprite>
         <sprite>sprites\spr_goku_right_sp1</sprite>
       </sprites>
-      <sprites name="Super Saiyan">
-        <sprite>sprites\spr_goku_transform1</sprite>
-        <sprite>sprites\spr_sgoku_front</sprite>
-        <sprite>sprites\spr_sgoku_front_walk</sprite>
-        <sprite>sprites\spr_sgoku_front_sp1</sprite>
-        <sprite>sprites\spr_sgoku_back</sprite>
-        <sprite>sprites\spr_sgoku_back_walk</sprite>
-        <sprite>sprites\spr_sgoku_back_sp1</sprite>
-        <sprite>sprites\spr_sgoku_right</sprite>
-        <sprite>sprites\spr_sgoku_right_walk</sprite>
-        <sprite>sprites\spr_sgoku_right_sp1</sprite>
-        <sprite>sprites\spr_sgoku_left</sprite>
-        <sprite>sprites\spr_sgoku_left_walk</sprite>
-        <sprite>sprites\spr_sgoku_left_sp1</sprite>
+      <sprites name="Mask">
+        <sprite>sprites\spr_player_mask</sprite>
       </sprites>
       <sprite>sprites\spr_shadow</sprite>
     </sprites>
     <sprites name="HUD">
       <sprite>sprites\spr_hud</sprite>
-      <sprite>sprites\spr_goku_skills</sprite>
-      <sprite>sprites\spr_hp_bar</sprite>
-      <sprite>sprites\spr_transformation_bar</sprite>
+      <sprite>sprites\spr_player1_skills</sprite>
+      <sprite>sprites\spr_xp_bar</sprite>
+      <sprite>sprites\fnt_dev</sprite>
+      <sprite>sprites\fnt_menu</sprite>
     </sprites>
     <sprites name="Effects">
       <sprite>sprites\spr_blast</sprite>
@@ -58,6 +47,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bg_battle</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -100,6 +90,7 @@
       <object>objects\ctr_master</object>
       <object>objects\ctr_display</object>
       <object>objects\ctr_culling</object>
+      <object>objects\ctr_level_up</object>
     </objects>
     <objects name="Parents">
       <object>objects\par_player</object>
@@ -125,8 +116,9 @@
   <rooms name="rooms">
     <room>rooms\rm_setup</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_battle</room>
   </rooms>
-  <constants number="30">
+  <constants number="24">
     <constant name="S_NORMAL">0</constant>
     <constant name="S_WALK">1</constant>
     <constant name="S_RUNNING">2</constant>
@@ -146,14 +138,8 @@
     <constant name="D_LEFT">3</constant>
     <constant name="P_GOKU">0</constant>
     <constant name="P_GOHAN">1</constant>
-    <constant name="P_GOTEN">2</constant>
-    <constant name="P_TRUNKS">3</constant>
-    <constant name="P_FTRUNKS">4</constant>
-    <constant name="P_VEGETA">5</constant>
-    <constant name="P_PICCOLO">6</constant>
-    <constant name="P_GOTENKS">7</constant>
-    <constant name="P_VEGETTO">8</constant>
-    <constant name="P_GOGETA">9</constant>
+    <constant name="P_VEGETA">2</constant>
+    <constant name="P_PICCOLO">3</constant>
     <constant name="sprite_center_x">sprite_get_xoffset(sprite_index) + sprite_width / 2</constant>
     <constant name="sprite_center_y">sprite_get_yoffset(sprite_index) + sprite_height / 2</constant>
     <constant name="null">false</constant>

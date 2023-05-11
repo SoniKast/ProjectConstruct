@@ -6,7 +6,7 @@
   <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_player_mask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -301,47 +301,9 @@ switch(global.hud_option)
         }
     break;
     case 2:
-        if(global.super_counter = 7 &amp;&amp; player_transformed == false)
-        {
-            if(button_b[input.hold])
-            {
-                player_state = S_TRANSFORM1;
-            }
-        }
-        
-        if(global.super_counter = 0 or global.super_counter &lt; 7)
-        {
-            if(button_b[input.press] &amp;&amp; player_transformed == false)
-            {
-                player_state       = S_NORMAL;
-                player_transformed = false;
-            }
-        }
-        
-        if(player_transformed == true &amp;&amp; global.super_counter = 7)
-        {
-            if(button_b[input.press])
-            {
-                player_state = S_NORMAL;
-            }
-        }
-        if(button_b[input.press] &amp;&amp; player_transformed == true)
-        {
-            player_transformed = false;
-            player_state       = S_NORMAL;
-        }
+    
     break;
 }
-
-if(global.super_counter &lt; 7)
-{
-    global.super_counter += 0.01;   
-}
-else 
-{
-    global.super_counter += 0;
-}
-
 </string>
           </argument>
         </arguments>

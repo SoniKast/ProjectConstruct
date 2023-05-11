@@ -45,8 +45,10 @@
 
  // Input variables:
     global.hud_option    = 0;
-    global.super_counter = 7;
-    global.healthpoints  = 43;
+    global.player_level  = 1;
+    global.player_xp     = 0;
+    global.player_max_xp = 100;
+    global.healthpoints  = 100;
     global.player_char   = P_GOKU;
     global.key_up        = vk_up;
     global.key_down      = vk_down;
@@ -59,6 +61,10 @@
     global.key_enter     = vk_enter;
     global.key_select    = vk_backspace;
  
+ // Game fonts:
+    global.font_dev      = font_add_sprite_ext(fnt_dev, "ABCDEFGHIJKLMNOPQRSTUVWXYZ.?!", 1, 1);
+    global.font_menu     = font_add_sprite_ext(fnt_menu, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", false, -1);
+ 
  // Sound variables:
     global.sfx_volume   = 1;
     global.bgm_volume   = 1;
@@ -68,11 +74,6 @@
     global.player_y      = -1;
     global.temp_player_x = -1;
     global.temp_player_y = -1;
-    global.bonus_x       = -1;
-    global.bonus_y       = -1;
-    global.player_score  = 0;
-    global.switch_state  = false;
-    global.death_height  = -1;
  
  // Initialize room setup.
     event_user(0);

@@ -2,9 +2,9 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
-  <depth>-99999</depth>
-  <persistent>0</persistent>
+  <visible>0</visible>
+  <depth>0</depth>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,21 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Switch options
-    if(global.hud_option &lt; 3 &amp;&amp; keyboard_check_pressed(global.key_Lshoulder))
-    {
-        global.hud_option += 1;
-    }
-    else if(global.hud_option = 3 &amp;&amp; keyboard_check_pressed(global.key_Lshoulder))
-    {
-        global.hud_option = 0;
-    }
+            <string>// Increase XP requirements when the levels advance
+if(global.player_xp &gt;= global.player_max_xp)
+{
+    global.player_xp = global.player_xp - global.player_max_xp;
+    global.player_max_xp += 50;
+    global.player_level++;
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="5" enumb="99">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -56,29 +54,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the HUD and everything
-    draw_sprite(spr_hud, 0, view_xview+8, view_yview+8);
-
-// Draw Goku's skills
-    switch(global.player_char)
-    {
-        case P_GOKU:
-            draw_sprite(spr_player1_skills, global.hud_option, view_xview+10, view_yview+10);
-        break;
-    }
-
-// Draw the HP bar
-    draw_rectangle_colour(view_xview+30, view_yview+14, view_xview+30+floor(global.healthpoints / 1.74), view_yview+21, $f5f5f5, $f5f5f5, $f5f5f5, $f5f5f5, false);
-
-// Draw the XP bar
-    draw_sprite_part(spr_xp_bar, 0, 0, 0, global.player_xp, 2, view_xview+28, view_yview+23);
-    
-// Draw the XP and Level for test purposes
-    draw_set_font(global.font_menu);
-    draw_set_halign(fa_left);
-    
-    draw_text(view_xview+6, view_yview+60, global.player_xp);
-    draw_text(view_xview+6, view_yview+80, global.player_level);
+            <string>global.healthpoints --;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="98">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.player_xp ++;
 </string>
           </argument>
         </arguments>
